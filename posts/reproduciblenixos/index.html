@@ -32,8 +32,8 @@ problèmatique lorsque nous voulons installer un logiciel qui dépend d&rsquo;un
 pas la même version. Le gestionnaire de paquet provoquera alors une erreur lors de la tentative
 d&rsquo;installation.</p><p>Pour être sûr d&rsquo;avoir une distribution propre, j&rsquo;ai dû reinstaller ma distribution mais j&rsquo;avais cette
 fois ci opté pour une ditribution fille de Archlinux nommée Manjaro (toujours Gnome) qui possédait les
-mêmes avantages que Ubuntu mais qui avait en plus un support pour installer des paquets non officielle
-(AUR package). J&rsquo;ai aussi du refaire des tutoriels (LinuxScoop, Arch Technologies) pour reproduire ma
+mêmes avantages que Ubuntu mais qui avait en plus un support pour installer des paquets non officiels
+(AUR package). J&rsquo;ai dû refaire des tutoriels (LinuxScoop, Arch Technologies) pour reproduire ma
 customisation de Gnome. Cette distribution était pour moi parfaite et je l&rsquo;ai gardé du début de ma
 deuxième année d&rsquo;étude jusqu&rsquo;au début de ma quatrième année. En maitrisant les environnements python
 (conda, poetry, python3 -m venv venv, docker), je me suis débarassé de tous les problèmes que j&rsquo;avais
@@ -45,19 +45,19 @@ installer/désinstaller un paquet, ajouter/supprimer une option; il faut
 le déclarer dans un de ces fichiers &ldquo;.nix&rdquo;.</p><p>Il y a plusieurs avantages à cela. Si une distribution est configurable avec seulement des fichiers
 &ldquo;.nix&rdquo;, cela veut dire que si vous sauvegadez ces fichiers, vous pourrez reproduire à l&rsquo;identique
 votre distribution sur une autre machine; d&rsquo;autant plus que pour configurer ou installer, cela
-se fait toujours avec une seule est même commande. En fait, ce n&rsquo;est pas tout à fait vrai. Cela dépend
-de si on utilise home-manager ou flake mais les commandes restent relativement proche.
+se fait toujours avec une seule est même commande. En fait, ce n&rsquo;est pas tout à fait vrai car cela dépend
+de si on utilise home-manager ou flake mais les commandes restent relativement proches.
 Sans rentrer dans les détails techniques, la généricité de la commande vient du fait qu&rsquo;elle &ldquo;met à jour&rdquo;
 la distribution par rapport aux fichiers de configuration &ldquo;.nix&rdquo;. Pour ajouter (respectivement supprimer)
 un paquet, il suffira juste d&rsquo;ajouter (respectivement enlever) la variable appropriée dans le fichier &ldquo;.nix&rdquo;.
 Un autre avantage à cela est que si nous voulons tester une autre configuration pour notre distribution,
 vous pouvez juste copier la configuration actuelle est changer les options que vous voulez ou de commenter
 les options dans votre fichier &ldquo;.nix&rdquo; (commenter reviens à supprimer comme en python , c/c++, &mldr;).
-Vous pourrez trouver ma configuration pour ma distribtion à la fin du poste dans la section &ldquo;Références&rdquo;</p><p>La distribution propose la possibilité de faire des environnements virtuels grâce à sa commande
+Vous pourrez trouver ma configuration pour ma distribtion à la fin du poste dans la page</p><p>La distribution propose la possibilité de faire des environnements virtuels grâce aux commandes
 <a href=https://nixos.wiki/wiki/Development_environment_with_nix-shell>nix-shell</a> et
 <a href=https://nixos.org/manual/nix/unstable/command-ref/nix-build.html>nix-build</a>.
 En plus de pouvoir configurer sa distribution avec des fichier &ldquo;.nix&rdquo;, il est aussi possible
-de configurer (compilation, construction, installation) des projets. Le terme technique et utilisé
+de configurer (compilation, construction, installation) des projets / paquets. Le terme technique et utilisé
 dans la communauté pour d&rsquo;écrire le fait de configurer un projet est &ldquo;l&rsquo;empaquetage&rdquo; traduit
 en anglais par &ldquo;packaging&rdquo;.</p><p>La notion d&rsquo;empaqueter répond à plusieurs questions qui permettent de rendre le paquet reproductible
 et non périssable.</p><p>Ces questions sont (non exhaustives) :</p><ul><li>Quelles sont les dépendances du paquet et en particulier où sont elles ?<ul><li><p>Sur github/gitlab ?</p><ul><li>Quel commit ? revs ?</li></ul></li><li><p>En local ?</p><ul><li>Quel est le path vers le paquet ?</li></ul></li></ul></li><li>Comment construire (build) le paquet ?<ul><li>Quel(s) langage(s) de programmation ? Python ? C/C++ ? Rust ?</li><li>Quel compilateur ? Quellle version ?</li><li>Quelle(s) option(s) de compilation (cmake par exemple) ?</li></ul></li></ul><p>Voici une dépendance que j&rsquo;ai dû empaqueter pour un de mes projets:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nix data-lang=nix><span style=display:flex><span><span style=color:#75715e># File OpenMesh.nix</span>
@@ -97,7 +97,7 @@ et un gcc11 en dépendance du paquet B. Ceci n&rsquo;aurait pas été possible s
 distribution classique; il aurait fallu utiliser deux containeurs docker contenant
 chacun une version de gcc car une distribution linux classique ne peut pas contenir
 plusieurs version d&rsquo;un même paquet.</p><p>Nous pouvons voir à la deuxième ligne que nous importons <code>&lt;nixpkgs></code>.
-<code>&lt;nixpkgs></code> est un repository de paquet dans lequel sont référencer les bibliothèques et
+<a href=https://github.com/NixOS/nixpkgs>nixpkgs</a> est une collection de paquets où sont référencés les bibliothèques et
 logiciels qui ont déjà été empaquetés par la communauté. Si nous voulons rechercher
 un paquet spécifique pour savoir s&rsquo;il a déjà était empaqueté ou s&rsquo;il va falloir le faire
 nous même, il y a deux possibilités :</p><ul><li>utiliser le site <a href=https://search.nixos.org/packages>search nixos</a> en faisant attention
