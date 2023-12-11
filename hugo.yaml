@@ -1,0 +1,207 @@
+baseURL: https://akhaten.github.io
+# baseURL: http://localhost:1313/
+languageCode: en-us
+title: Jessy Khafif
+relativeURL: true
+# theme: tailbliss
+
+# baseURL: ''
+# title: Jessy Khafif
+# languageCode: en-us
+# theme: tailbliss
+DefaultContentLanguage: en
+enableEmoji: true
+# enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: false
+paginate: 9
+darkmode_js:
+  - assets/js/darkmode.js
+enableInlineShortcodes: true
+
+contentdir: content
+layoutdir: layouts
+
+
+params:
+  author: Jessy Khafif
+  # authorimage: ../assets/images/global/author.webp
+  # og_image: ../assets/images/pages/our-mission.png
+  moto: "Ingénieur Recherche et Développement (R&D)"
+  description: "\"Nul ne possède la connaissance absolue mais il est de notre
+    devoir d'acquérir le savoir qui nous fera avancer vers un meilleur avenir.\""
+  disable_theme_toggle: false
+  disable_stay_uptodate: true
+
+  p1:
+    heading: "Machine Learning"
+    image: "./images/pages/machine_learning.jpg"
+    content:
+      - text: "Mon master en intelligence artificielle m'a permis d'obtenir des
+        connaissances en apprentissage automatique avec les réseaux de neurones
+        et l'utilisation du framework PyTorch ainsi que l'apprentissage par 
+        renforcement"
+      # - text: write something
+      # - text: write something
+        
+  p2:
+    heading: "Computer Graphics"
+    image: "images/pages/computer_graphics.png"
+    content:
+      - text: "J'ai étudié le traitement de données 3D tel que la représentation
+        et structuration d'un maillage 3D, la déformation de maillages 3D ainsi
+        que le traitement de nuages de points." 
+      - text: "J'ai également pu acquérir des compétences dans le rendu 3D tel 
+          le lancer de rayons (ray tracing) ainsi que les shaders (glsl) avec Opengl."
+      - text: "Je m'auto-forme également sur Vulkan."
+
+  p3:
+    heading: "Signal Processing"
+    image: "images/pages/signal_processing.png"
+    # image: "../images/tn.jpg"
+    content:
+      - text: "Parmis mes compétences en traitement d'images, il y a la réstoration
+        d'images (déconvolution, dé-bruitage, super-résolution), l'imagerie satellite
+        hyper-spectrale. De plus, j'ai étudié les problèmes inverses ainsi que des
+        méthodes d'optimisation pour les résoudre basées sur des algorithmes itératifs
+        et des réseaux de neurones."
+
+  p6:
+    heading: "Computer Vision"
+    image: "images/pages/computer_vision.jpg"
+    # image: "../images/tn.jpg"
+    content:
+      - text: "Parmis mes compétence en vision par ordinateur, il y a la calibration
+        de caméra ainsi que la fusion de données tel que le regroupement d'images par
+        détection et mise en correspondance de points d'intérêts."
+
+  social_media:
+    github:
+      enabled: true
+      url: "https://github.com/akhaten"
+
+  # social_media:
+  #   github:
+  #     enabled: true
+  #     url: 'https://github.com/nusserstudios'
+  #   facebook:
+  #     enabled: true
+  #     url: 'https://facebook.com/nusserstudios'
+  #   instagram:
+  #     enabled: true
+  #     url: 'https://instagram.com/nusserstudios'
+  #   twitter:
+  #     enabled: true
+  #     url: '@nusserstudios'
+    
+
+menu:
+
+
+  main:
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+    # - identifier: categories2
+    #   pre: dropdown
+    #   name: Categories2
+    #   weight: 30
+    - identifier: blog
+      name: Blog
+      url: /categories/blog/
+      weight: 20
+    - identifier: videos
+      name: Videos
+      url: /categories/videos/
+      weight: 20
+
+    - identifier: aboutme
+      # pre: complexdropdown
+      pre: dropdown
+      name: About Me
+      weight: 30
+    
+    - identifier: categories
+      pre: dropdown
+      name: Categories
+      weight: 30
+      # - identifier: dropdown
+      #   pre: complexdropdown
+      #   name: Dropdown
+      #   weight: 40
+
+  aboutme:
+  - identifier: projectsfuturs
+    name: Projets futurs
+    url: /aboutme/ProjetsFuturs
+    weight: 10
+  - identifier: cv
+    name: CV
+    url: /aboutme/CV
+    weight: 10
+
+
+
+  # footer:
+    # - identifier: about
+    #   name: About
+    #   url: /about/
+    #   weight: 10
+    # - identifier: blog
+    #   name: Blog
+    #   url: /categories/blog/
+    #   weight: 20
+    # - identifier: news
+    #   name: News
+    #   url: /categories/news/
+    #   weight: 30
+    # - identifier: news
+    #   name: news
+    #   url: /categories/news/
+    #   weight: 30
+    # - identifier: prose
+    #   name: Prose
+    #   url: /prose/
+    #   weight: 40
+    # - identifier: contact
+    #   name: Contact
+    #   url: /contact/
+    #   weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  category: Categories
+  tag: Tags
+
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    enableDNT: false
+    simple: false
+  youtube:
+    disable: false
+    privacyEnhanced: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.104.0"
