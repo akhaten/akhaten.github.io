@@ -60,7 +60,7 @@ params:
     image: "images/pages/signal_processing.png"
     # image: "../images/tn.jpg"
     content:
-      - text: "Parmis mes compétences en traitement d'images, il y a la réstoration
+      - text: "Parmis mes compétences en traitement d'images, il y a la réstauration
         d'images (déconvolution, dé-bruitage, super-résolution), l'imagerie satellite
         hyper-spectrale. De plus, j'ai étudié les problèmes inverses ainsi que des
         méthodes d'optimisation pour les résoudre basées sur des algorithmes itératifs
