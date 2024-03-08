@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Jessy Khafif</title><link>https://akhaten.github.io/categories/blog/</link><description>Recent content in Blog on Jessy Khafif</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://akhaten.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Distribution linux reproductible et modulable avec Nixos</title><link>https://akhaten.github.io/posts/reproduciblenixos/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>https://akhaten.github.io/posts/reproduciblenixos/</guid><description>En programmation, parmis les critères les plus importants, il y a la réutilisabilité du code ainsi que de ses dépendances. Ainsi, pour permettre à un développeur ou un chercheur de récupérer votre code pour ses propres travaux, il faut pouvoir lui fournir un environnement rapide à mettre en place et non périssable. Dans ce post, je parlerai de Nixos, une distribution atypique mais très pratique.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Jessy Khafif</title>
+    <link>https://akhaten.github.io/categories/blog/</link>
+    <description>Recent content in Blog on Jessy Khafif</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://akhaten.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distribution linux reproductible et modulable avec Nixos</title>
+      <link>https://akhaten.github.io/posts/reproduciblenixos/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://akhaten.github.io/posts/reproduciblenixos/</guid>
+      <description>En programmation, parmis les critères les plus importants, il y a la réutilisabilité du code ainsi que de ses dépendances. Ainsi, pour permettre à un développeur ou un chercheur de récupérer votre code pour ses propres travaux, il faut pouvoir lui fournir un environnement rapide à mettre en place et non périssable. Dans ce post, je parlerai de Nixos, une distribution atypique mais très pratique.</description>
+    </item>
+    
+  </channel>
+</rss>
